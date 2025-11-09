@@ -2,7 +2,7 @@ from pydantic import BaseSettings
 from typing import List, Optional
 
 class Settings(BaseSettings):
-    telegram_bot_token: str
+    telegram_bot_token: 7518672889:AAFviSPzrazXxOShSdDTr4FzuSjrYn85paI
     telegram_api_id: Optional[int] = None  # if using pyrogram
     telegram_api_hash: Optional[str] = None
 
