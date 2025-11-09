@@ -1,0 +1,10 @@
+[ ] Implement real provider plugins
+[ ] Implement watermark & metadata functions
+[ ] Implement ffmpeg scaling with bitrate ladder
+[ ] Implement Telegram upload + get file links logic
+[ ] Implement external storage providers (Mega, GDrive)
+[ ] Implement URL shortener integration (Bitly)
+[ ] Replace in-memory dicts with DB models
+[ ] Add Alembic migrations
+[ ] Add user settings management with FSM
+[ ] Add proper logging and error handling

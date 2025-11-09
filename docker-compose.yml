@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    env_file: .env
+    volumes:
+      - ./data:/data
+    depends_on:
+      - redis
+      - db
+
+  worker:
+    build: .
+    command: celery -A bot.worker.celery_app worker -l INFO
+    env_file: .env
+    depends_on:
+      - redis
+      - db
+
+  redis:
+    image: redis:7-alpine
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ottbot
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
