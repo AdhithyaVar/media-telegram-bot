@@ -3,8 +3,8 @@ from typing import List, Optional
 
 class Settings(BaseSettings):
     telegram_bot_token: 7518672889:AAFviSPzrazXxOShSdDTr4FzuSjrYn85paI
-    telegram_api_id: Optional[int] = None  # if using pyrogram
-    telegram_api_hash: Optional[str] = None
+    telegram_api_id: Optional[int] = 28390734  # if using pyrogram
+    telegram_api_hash: Optional[str] = d19bc2567b1f7e98fcc368cd185a74d9
 
     redis_url: str = "redis://redis:6379/0"
     database_url: str = "postgresql+psycopg://user:password@db:5432/ottbot"
